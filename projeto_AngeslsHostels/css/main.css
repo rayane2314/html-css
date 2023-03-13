@@ -179,4 +179,19 @@ line-height: 1,5;
     }
     
   }
+@media screen and (main-width: 62.5em) { /* 1000 / 16 */
+    .top-content{
+/*     
+        background-color: #521a66;
+       background-image: url(../images/bg-topo-1198x670.jpg);
+*/
+       background: #521a66 url(../images/bg-topo-1198x670.jpg);
+       height: 15em;
+       padding-top: 15em;
+    }
+    
+}
 
+@media screen {
+    
+}
