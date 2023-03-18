@@ -1,0 +1,98 @@
+<!--doctype informa ao agente de usuario a versão do html
+que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="descrição bacanuda">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="widht-device-widht">
+    
+    <style>
+        #grupo-cores{
+            padding: 15px;
+            background: url(imagens/tile.png);
+        }
+
+        #grupo-cores div{
+            width: 80%;
+            height: 150px;
+            border: 10px solid rgba(0,0,0,.5);
+            margin: 20px auto;
+            padding: 15px;
+            counter-increment: contador;
+        }
+        #grupo-cores div:before{
+            content: '{' counter(contador)'}';
+        }
+
+        #grupo-cores div:nth-child(2){
+            background-color: blueviolet;
+            background-clip: content-box;
+        }
+
+        #grupo-cores div:nth-child(3){
+            background-color: rgb(50%, 50%, 0%);
+            background-clip: content-box;
+         }
+         
+         #grupo-cores div:nth-child(4){
+            background-color: rgb(50%, 50%, .5);
+            background-clip: content-box;
+         }
+         
+         #grupo-cores div:nth-child(5){
+            background-color: rgb(120deg, 100%, 20%);
+            background-clip: content-box;
+         }
+        #grupo-cores div:nth-child(6){
+            background-color: rgb(120deg, 100%,  .5);
+            background-clip: content-box;
+         }
+
+         #grupo-cores div:nth-child(7){
+            background-image: linear-gradient( to bottom left, blue,
+            red);
+            background-clip: content-box;
+         }
+        </style>
+    </head>
+    <body>
+        <h2>backgrounds, cores e gradientes</h2>
+        <p>Names, hexadescimais, RGB, RGBa, HSL, HSLa</p>
+
+        <div id="grupo-cores">
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Harum magni, similique facere quas numquam
+            incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Harum magni, similique facere quas numquam
+            incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Harum magni, similique facere quas numquam
+            incidunt rem aperiam voluptate eius recusandae!</p></div>
+            <div class="cores"><p>Lorem ipsum dolor sit amet, consectetur 
+            adipisicing elit. Harum magni, similique facere quas numquam
+            incidunt rem aperiam voluptate eius recusandae!</p></div>   
+
+        
+</html> 
+
+
+
+    
+    
+
+
+    
+
+
+    
+
+
+
+
+
+
+
