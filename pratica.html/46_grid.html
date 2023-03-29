@@ -1,0 +1,102 @@
+<!--doctype informa ao agente de usuario a versão do html
+que deve ser renderizada-->
+<html lang="pt-br">
+<head>
+    <title>pagina de exemplo estrutura basica</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Daniel">
+    <meta name="description" content="descrição bacanuda">
+    <meta name="keywords" content="html5, tecnologia">
+    <meta name="viewport" content="widht-device-widht">
+    
+    <style>
+        .gridcontainer{
+            width: 90%;
+            background: #ccc;
+            margin: 30px;
+        }
+
+        .griditem{
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+       
+       /* GRId */
+       .gridcontainer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 100px 50px 1fr 50px;
+        grid-gap: 20px;
+        
+        grid-template-areas:
+        "header header  header"
+        "nav     nav     nav"
+        "main    main    aside"
+        "footer  footer   footer"   
+       }
+
+      .header{
+/*        grid-column: 1 / -1;*/
+        grid-area: header;
+       }
+       .nav{
+/*        grid-column: 1 / 3;*/
+        grid-area: nav;
+       }
+       .aside{
+/*        grid-row: 2 / -1;
+        grid-column: 3 / 4;*/
+        grid-area: aside;
+        }
+       .main{
+/*        grid-column: 1 / 3;*/
+        min-height: 200px;
+        grid-area: main;
+          }
+       
+      .footer{
+/*        
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;*/
+        grid-area: footer;
+       
+    }
+
+    </style>
+</head>
+<body>
+    <h2>Grid Layout</h2>
+
+
+    <div class="gridcontainer">
+        <header class="header griditem">header</header>
+        <nav class="nav griditem">nav</nav>
+        <aside class="aside griditem">aside</aside>
+        <main class="main griditem">
+            main
+        </main>
+        <footer class="footer griditem">footer</footer>
+     </div>
+       
+    </body>
+</html>
+
+
+
+
+    
+    
+
+
+    
+
+
+    
+
+
+
+
+
+
+
