@@ -12,11 +12,18 @@
         var numero = prompt('digite um numero');
         numero = parseFloat(numero);
 
-        document.write( numero + ' x 1 = '+ (numero * 1)
-        +' <br>');
-     
-        document.write( numero + ' x 2 = '+ (numero * 2)
-        +' <br>');
+       
+     var indice = 1;
+     //repita até que indice seja <= 1000
+
+    while(indice <= 1000)   
+        document.write( numero + ' x  '+ indice +' = '+
+         (numero * indice) +' <br>');
+
+
+         indice = indice + 1;
+        
+         document.whrite('saiu do loop');
 
         </script>
 
