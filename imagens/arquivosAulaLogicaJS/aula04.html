@@ -7,47 +7,54 @@
     <body>
         <h1>Lógica de promação com Javascript</h1>
 
-        <button onclick="mostrarTabuada()">Criar Tabuada</button>
-        <button onclick="LimparTabuada()">Limpar Tabuada</button>
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="muultiplicar()">*</button>
+        <button onclick="dividir()">/</button>
         
         <div id="output"></div>
 
         <script>
 
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
 
-            function mostrarTabuada(){ 
-                //perguntar o numero para o usuario
-                var n = prompt('digite um numero');
+            escreve();
 
-                //converter o numero
-                n = parseFloat(n);
-
-                //criar uma variavel que servira de indice
-                var i = 1;
-
-                //enquanto indice <= 1000
-                    //concatena na variavel mensagem
-                while(i <= 1000){
-                    mensagem += 'n x i = x*i <br>';
-                    i++;
-                }
-
-        
-               
+            function escreve(){
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
             }
 
-            output.innerHTML = mensagem;
 
+            function somar(){
+                var n = prompt('digite uma numero');
+                n = parseFloat(n);
+                n1 = n1 + n;
+                escreve();
+            }
 
+            function subtrair(){
+                var n = prompt('digite uma numero');
+                n = parseFloat(n);
+                n1 = n1 - n;
+                escreve();
+            }
+
+            function muultiplicar(){
+                var n = prompt('digite uma numero');
+                n = parseFloat(n);
+                n1 = n1 * n;
+                escreve();
+            }
+
+            function dividir(){
+                var n = prompt('digite uma numero');
+                n = parseFloat(n);
+                n1 = n1 / n;
+                escreve();
+            }
             
-            var output = document.querySelector('#output');
-
-            var mensagem = '';
-          
-            
-            
-
-
         </script>
     </body>
 </html>
