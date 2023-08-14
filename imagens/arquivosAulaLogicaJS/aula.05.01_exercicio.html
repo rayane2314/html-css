@@ -16,7 +16,7 @@
 
     <script>
 
-        var n1 = prompt('digite um numero');    
+        var n1 = prompt('digite um número');    
         n1 = parseFloat(n2);
 
         escreve(n2);
@@ -24,6 +24,7 @@
         function iniciarcalculo(simbolo){
             var n1 =
             document.querySelector('#output').textContent;
+            n1 = parseFloat(n1);
 
             var n2 = prompt('digite outro número');
             n2 = parseFloat(n2);
@@ -41,9 +42,10 @@
 
 
         function calcular(simbolo, n1, n2){
+            console.log(simbolo)
 
-            if(simbolo !== '+' || simbolo !== '-' || simbolo
-            !== '*' || simbolo !== '/'){
+            if(simbolo !== '+' && simbolo !== '-' && simbolo
+            !== '*' && simbolo !== '/'){
                 alert('digite um simbolo valido')
                 return 0;
             }
