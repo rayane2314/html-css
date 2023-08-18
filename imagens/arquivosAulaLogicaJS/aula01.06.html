@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <title>Lógica de promação Javascript</title>
+    <title>Lógica de programação Javascript</title>
     <meta charset="utf-8">
     </head>
     <body>
-        <h1>Lógica de promação com Javascript</h1>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <div id="output"></div>
     </body>
 
     <script>
 
-        var n1 =   prompt('digite um n´mero');
+        var produtos = new Array('caneta','lapis',
+       'tesoura', 'borracha', 'caderno', 'livro');
 
-        var n2 =  parseFloat(prompt('digite outro numero'));
 
-        var media = ( n1 + n2) / 2;
+       var output = document.querySelector('#output');
 
-        alert  (media  > 6 );
+
+       var msg = '';
+       for (var i = 0; i < produtos.length; i++){
+        msg += 'produto' + (i + i) + ':'+
+        produtos[i] +'<br>';
+       }
+
+       output.innerHTML = msg;
 
     </script>
 </html>
