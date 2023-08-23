@@ -9,22 +9,22 @@
     </body>
 
     <script>
+       var arr = new Array(1, 2, 3, 5, 2,);
 
-        var dias = new Array('domingo', 'segunda',
-        'terça', 'quarta', 'quinta', 'sexta', 'sabado');
+       //mostrar na tela a soma dos números pares da array
+       acima
+       var soma = 0;
+       for (var i = 0; i < arr.length; i++){
+        console.log(i);
+        console.log(arr[i]);
 
-        var hoje = new Date();
-        var diaSemana = hoje.getDay(); // retorna o dia
-        da Semana
+        if( !isNaN(arr[i]) && arr[i] % 2 === 0){
+            soma += arr[i];
+        }
+       
+       }
 
-        /*
-        0 - domingo;
-        1 - segunda;
-        ...
-        6 - sabado;
-        */
-
-       alert('Bem vindo, hoje é ' + dias[6]);
+       alert('a soma dos numeros pares é:' + soma);
 
 
     </script>
