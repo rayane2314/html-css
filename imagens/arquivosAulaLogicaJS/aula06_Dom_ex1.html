@@ -13,9 +13,11 @@
 
           (function(){
             var nome = prompt('qual seu nome');
-            document.querySelector('#msg').textContent = 
-            "Bem vindo, " + nome;
-          })
+            document.querySelector('#msg').innerHTML = 
+            "Bem vindo, <b>" + nome + "</b>";
+
+          })()
+
         </script>
     </body>
 </html>
