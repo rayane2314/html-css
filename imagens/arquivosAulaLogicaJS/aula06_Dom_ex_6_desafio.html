@@ -88,33 +88,41 @@
             (function(){
                 var trs = document.querySelectorAll('.js-tabela tbody .aluno');
 
-                var x = 0;
+                var x= 0;
                 while(trs[x]){
                     var linhaAluno = trs[x];
                     console.log(linhaAluno);
 
-                    var n1, n2, n3, n4, media;
-
-                    var tds = linhaAluno.querySelectorAll('td')
+                    var tds = linhaAluno.querySelectorAll('td');
                     console.log(tds);
 
-                    n1 = pegaNota(tds[1]);
-                    n2 = pegaNota(tds[2]);
-                    n3 = pegaNota(tds[3]);
-                    n4 = pegaNota(tds[4]);
+                    var notas = recuperarNumerosDecolunas(tds);
 
-                    media = calcularMedia(n1, n2, n3, n4);
+                    media = calcularMedia.apply(this, notas);
 
                     linhaAluno.querySelector('.aluno-m').textContent = media;
                     x++;
                 }
 
+                function  recuperarNumerosDecolunas(tds){
+                    var x= 0;
+                    var arr = [];
+                    while( tds[x] ){
+                        if( !isNaN( tds[x].textContent ) &&
+                        tds[x].textcontent !== '' ){
+                            arr.push( tds[x].textcontent );
+                        }
+                        x++;
+                    }
+                     return arr;
+                
+                }
 
                 function pegaNota(td){
                     return parseFloat(td.textcontent)
                 }
-
-            })
+                
+            })()
 
         </script>
        
